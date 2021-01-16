@@ -1,0 +1,19 @@
+login page
+<br>
+{% if user.is_authenticated %}
+    login success!
+    {{user}}
+    :
+    {{user.username}}
+    <a href="/auth/logout">logout</a>
+{% else %}
+    <br>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input name="username" type="text">
+        <input name="password" type="password">
+        <input type="submit" text="login">
+    </form>
+    <a href="/auth/signup">signup</a>
+{% endif %}
