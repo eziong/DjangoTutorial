@@ -38,7 +38,7 @@ class NewUser1(AbstractBaseUser, PermissionsMixin):
     profit = models.IntegerField(default=0)
     asset = models.IntegerField(default=0)
     is_staff = models.BooleanField(default=False)
-    is_active = models.BooleanField(default=False)
+    is_active = models.BooleanField(default=True)
 
     objects = CustomAccountManager()
 
